@@ -9,4 +9,23 @@
   max-width: 750px;
 }
 
+.nav-container {
+  display: grid;
+  padding: auto;
+}
 
+.navigation {
+  text-align: center;
+  display: flex;
+  align-self: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.navigation h1{
+  margin: 10px;
+}
+
+body {
+  background-color: rgb(14, 8, 1);
+}
