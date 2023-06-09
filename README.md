@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+Planet Explorer Application
+An application designed to help you browse the many planets in the galaxy. Planets uploaded to the backend of this project exist in the fictional world of Star Wars and therefor all pre-loaded planets do not exist in real life, though portions of the applications functionality will allow for you to add your own planets to the list, both fictional and real.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description:
+This SPA is a simple tool that allows you to browse planets, add you own into the database and save planets for future reference into a separate travel Itinerary field once we finally master sub-light travel!
 
-## Available Scripts
+Project Info:
+This project uses React.js as a Front-End as well as a seperate json file as a Back-End. The backend for this project which is needed to have this project work can be found [here](https://github.com/JMcKeag-blip/Phase-2-Project-Backend).
 
-In the project directory, you can run:
+Setup:
+Back-End:
+First you will need to fork and clone the backend for this project. Once again found Here. After this is cloned you can start this server by moving down into its directory that was just created and running npm run dev. This should get the backend of the server fully up and running. You should see a notification in the terminal saying that your server is running on port 3001 if this has been set up correctly. Keep this up and running.
 
-### `npm start`
+Front-End:
+Now for the Front-End, fork and clone this project down to your environment. Once cloned move down into this new directory and use npm start to launch the browser view of the project. If successfully run you should see in the terminal that there is a localhost now running on port 3000 or your default port to start your applications on. Also the browser should now open, or open a new tab with the project now running.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+How to use this App:
+This app has a home page that will be loaded with a bunch of information on how to fully use the app. The main way to use this app is to navigate the different tabs and pages of this SPA using the buttons across the top of the page. The bright yellow button will be the current page you are on. There will also be information on each page letting you know what it is for.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Credits:
+This project uses a JSON Server Template found [here](https://github.com/learn-co-curriculum/json-server-template).
+All information and images inputed into the backend of this project can be credited to the [Wookiepedia](https://starwars.fandom.com/wiki)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is the Phase 2 Project for James McKeag, 
+Student at Flatiron School for Software Engineering.
