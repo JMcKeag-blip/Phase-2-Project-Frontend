@@ -11,8 +11,8 @@ const look = {
 }
 
 const activated = {
-    background: "yellow",
-    color: "blue"
+    background: "navy",
+    color: "white"
 }
 
 function Navbar(){
