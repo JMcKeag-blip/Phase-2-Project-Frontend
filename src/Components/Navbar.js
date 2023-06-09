@@ -6,12 +6,12 @@ const look = {
     height: "auto",
     padding: "15px",
     margin: "0 5px 5px",
-    background: "rgb(116, 0, 0)",
-    color: "rgb(227, 209, 186)",
+    background: "rgb(100, 100, 100)",
+    color: "rgb(230, 210, 190)",
 }
 
 const activated = {
-    background: "navy",
+    background: "goldenrod",
     color: "white"
 }
 
@@ -26,6 +26,18 @@ function Navbar(){
                     style={look}
                     activeStyle={activated}
                 >Home</NavLink>
+                <NavLink
+                    to="/Itinerary"
+                    exact
+                    style={look}
+                    activeStyle={activated}
+                >Itinerary</NavLink>
+                <NavLink
+                    to="/PlanetList"
+                    exact
+                    style={look}
+                    activeStyle={activated}
+                >Planet List</NavLink>
             </div>
         </div>
     )
