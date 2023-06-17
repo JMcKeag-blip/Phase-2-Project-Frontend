@@ -4,15 +4,24 @@ import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
+  const [planetsInItinerary, setPlanetsInItinerary] = useState([])
+  const [planetList, setPlanetList] = useState([])
   const [initialPlanetList, setInitialPlanetList] = useState([])
 
 const LOCAL= "http://localhost:3001/planets"
+const API= "https://swapi.dev/api/planets/?page=2"
 
 useEffect(()=> {
   fetch(LOCAL)
   .then(r => r.json())
-  .then(d => setInitialPlanetList(d))
+  .then(d => setPlanetsInItinerary(d))
+
+  fetch(API)
+  .then(r => r.json())
+  .then(d => setInitialPlanetList(d.results))
 }, [])
+
+
 
   return(
     <>
