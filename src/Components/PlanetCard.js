@@ -32,4 +32,4 @@ return(
     )
 }
 
-export default Planetcard
+export default PlanetCard
