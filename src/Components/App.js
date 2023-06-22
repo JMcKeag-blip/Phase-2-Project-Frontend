@@ -2,6 +2,9 @@ import React, { useEffect, useState} from "react";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
+import FullPlanetList from "./FullPlanetList";
+import Itinerary from "./Itinerary";
+import PlanetCard from "./PlanetCard";
 
 function App() {
   const [planetsInItinerary, setPlanetsInItinerary] = useState([])
