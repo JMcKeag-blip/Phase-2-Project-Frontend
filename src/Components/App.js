@@ -23,7 +23,7 @@ const travelList= planetsInItinerary.map(planet=>{
 })
 
 const LOCAL= "http://localhost:3001/planets"
-const API= "https://swapi.dev/api/planets/?page=2"
+const API= "https://swapi.dev/api/planets/1/"
 
 useEffect(()=> {
   fetch(LOCAL)
@@ -37,7 +37,7 @@ useEffect(()=> {
 
 useEffect(()=> {
   initialPlanetList.forEach(planet =>{
-    fetch(`https://swapi.dev/api${planet.url}`)
+    fetch(`https//swapi.dev${planet.url}`)
     .then(r=> r.json())
     .then(d=> setPlanetList(previous=>
       [
@@ -45,7 +45,7 @@ useEffect(()=> {
         <PlanetCard
             key={d.index}
             item={d}
-            location='fullList'
+            location='planetList'
             typeOfClick={handlePost}
           />
       ]

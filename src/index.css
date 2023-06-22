@@ -9,7 +9,7 @@
   max-width: 750px;
 }
 
-.planetlist {
+.planetList {
   margin: 0 auto;
   margin-left: 20px;
   margin-right: 20px;
@@ -67,5 +67,5 @@
 }
 
 body {
-  background-color: rgb(14, 8, 1);
+  background-color: goldenrod;
 }

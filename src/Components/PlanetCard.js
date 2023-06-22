@@ -12,7 +12,7 @@ function PlanetCard({ planet, typeOfClick, location }){
 
 function handleClick(){
     if(location === 'Itinerary'){
-        let choice = window.confirm(`${planet.name} , Will be removed from your Ininerary!`)
+        let choice = window.confirm(`${planet.name} , Will be removed from your Itinerary!`)
         if(choice === true) typeOfClick(planet)
     }
     if(location === 'fullList'){
