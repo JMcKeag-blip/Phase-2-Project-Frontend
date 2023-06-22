@@ -35,7 +35,7 @@ useEffect(()=> {
   .then(d => setInitialPlanetList(d.results))
 }, [])
 
-useEffect(()=> {
+/*useEffect(()=> {
   initialPlanetList.forEach(planet =>{
     fetch(`https//swapi.dev${planet.url}`)
     .then(r=> r.json())
@@ -51,7 +51,7 @@ useEffect(()=> {
       ]
     ))
   })
-}, [initialPlanetList])
+}, [initialPlanetList])*/
 
 function handlePost(planetToAdd){
   fetch(LOCAL, {
@@ -69,8 +69,7 @@ function handleItineraryClick(clicked){
   fetch(`${LOCAL}${clicked.id}`, {
     method: "DELETE"
   })
-  setPlanetsInItinerary(inItineraryPlanets => 
-    inItineraryPlanets.filter(each => each.id !== clicked.id))
+  setPlanetsInItinerary(inItineraryPlanets => inItineraryPlanets.filter(each => each.id !== clicked.id))
 }
 
   return(
