@@ -65,7 +65,13 @@ function handlePost(planetToAdd){
     .then(d=> setPlanetsInItinerary([...planetsInItinerary, d]))
 }
 
-
+function handleItineraryClick(clicked){
+  fetch(`${LOCAL}${clicked.id}`, {
+    method: "DELETE"
+  })
+  setPlanetsInItinerary(inItineraryPlanets => 
+    inItineraryPlanets.filter(each => each.id !== clicked.id))
+}
 
   return(
     <>
@@ -74,6 +80,12 @@ function handlePost(planetToAdd){
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/Itinerary">
+          <Itinerary planets={travelList}/>
+        </Route>
+        <Route exact path="/PlanetList">
+          <FullPlanetList planets={planetList}/>
         </Route>
       </Switch>
     </>
