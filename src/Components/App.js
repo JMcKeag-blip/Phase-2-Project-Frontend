@@ -11,6 +11,17 @@ function App() {
   const [planetList, setPlanetList] = useState([])
   const [initialPlanetList, setInitialPlanetList] = useState([])
 
+const travelList= planetsInItinerary.map(planet=>{
+  return(
+    <PlanetCard
+      key={planet.id ? `${planet.name} ${planet.id}` : planet.name}
+      planet={planet}
+      location='itinerary'
+      typeOfClick={handleItineraryClick}
+      />
+  )
+})
+
 const LOCAL= "http://localhost:3001/planets"
 const API= "https://swapi.dev/api/planets/?page=2"
 
@@ -23,6 +34,36 @@ useEffect(()=> {
   .then(r => r.json())
   .then(d => setInitialPlanetList(d.results))
 }, [])
+
+useEffect(()=> {
+  initialPlanetList.forEach(planet =>{
+    fetch(`https://swapi.dev/api${planet.url}`)
+    .then(r=> r.json())
+    .then(d=> setPlanetList(previous=>
+      [
+        ...previous,
+        <PlanetCard
+            key={d.index}
+            item={d}
+            location='fullList'
+            typeOfClick={handlePost}
+          />
+      ]
+    ))
+  })
+}, [initialPlanetList])
+
+function handlePost(planetToAdd){
+  fetch(LOCAL, {
+    method: "POST",
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify(planetToAdd)
+  })
+    .then(r=> r.json())
+    .then(d=> setPlanetsInItinerary([...planetsInItinerary, d]))
+}
 
 
 

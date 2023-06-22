@@ -1,7 +1,7 @@
 import React from "react";
 
-function Itinerary({ items }) {
-    const itemsToDisplay = [...items].sort((a, b) => {
+function Itinerary({ planets }) {
+    const planetsToDisplay = [...planets].sort((a, b) => {
         if(a.key > b.key){
             return 1
         }
@@ -20,7 +20,7 @@ function Itinerary({ items }) {
                 </p>
                 <br/>
                 <div className="card-container">
-      	            {itemsToDisplay}
+      	            {planetsToDisplay}
                 </div>
         </div>
     )
