@@ -70,14 +70,4 @@ body {
   background-color: goldenrod;
 }
 
-.btn-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  text-align: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
-}
+

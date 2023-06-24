@@ -2,7 +2,7 @@ Planet Explorer Application
 An application designed to help you browse the many planets in the galaxy. Planets uploaded to the backend of this project exist in the fictional world of Star Wars and therefor all pre-loaded planets do not exist in real life, though portions of the applications functionality will allow for you to add your own planets to the list, both fictional and real.
 
 Description:
-This SPA is a simple tool that allows you to browse planets, add you own into the database and save planets for future reference into a separate travel Itinerary field once we finally master sub-light travel!
+This SPA is a simple tool that allows you to browse planets, add your own into the database and save planets for future reference into a separate travel Itinerary field once we finally master sub-light travel!
 
 Project Info:
 This project uses React.js as a Front-End as well as a seperate json file as a Back-End. The backend for this project which is needed to have this project work can be found [here](https://github.com/JMcKeag-blip/Phase-2-Project-Backend).
@@ -19,7 +19,7 @@ This app has a home page that will be loaded with a bunch of information on how 
 
 Credits:
 This project uses a JSON Server Template found [here](https://github.com/learn-co-curriculum/json-server-template).
-All information and images inputed into the backend of this project can be credited to the [Wookiepedia](https://starwars.fandom.com/wiki)
+All information inputed into the backend of this project can be credited to the [Wookiepedia](https://starwars.fandom.com/wiki)
 
 This is the Phase 2 Project for James McKeag, 
 Student at Flatiron School for Software Engineering.

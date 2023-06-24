@@ -11,7 +11,7 @@ function App() {
   const [planetList, setPlanetList] = useState([])
   const [initialPlanetList, setInitialPlanetList] = useState([])
 
-const travelList= planetsInItinerary.map(planet=>{
+const travelList= planetsInItinerary.map(planet => {
   return(
     <PlanetCard
       key={planet.id ? `${planet.name} ${planet.id}` : planet.name}
@@ -22,17 +22,28 @@ const travelList= planetsInItinerary.map(planet=>{
   )
 })
 
-const LOCAL= "http://localhost:3001/planets"
+const starChart= initialPlanetList.map(planet => {
+  return(
+    <PlanetCard
+      key={planet.id ? `${planet.name} ${planet.id}` : planet.name}
+      planet={planet}
+      location='planetList'
+      typeOfClick={handlePost}
+      />
+  )
+})
+
 const API= "https://swapi.dev/api/planets/1/"
+const LOCAL= "http://localhost:3001/planets"
 
 useEffect(()=> {
   fetch(LOCAL)
   .then(r => r.json())
   .then(d => setPlanetsInItinerary(d))
 
-  fetch(API)
+  fetch(LOCAL)
   .then(r => r.json())
-  .then(d => setInitialPlanetList(d.results))
+  .then(d => setInitialPlanetList(d))
 }, [])
 
 /*useEffect(()=> {
@@ -84,7 +95,7 @@ function handleItineraryClick(clicked){
           <Itinerary planets={travelList}/>
         </Route>
         <Route exact path="/PlanetList">
-          <FullPlanetList planets={planetList}/>
+          <FullPlanetList planets={starChart}/>
         </Route>
       </Switch>
     </>
