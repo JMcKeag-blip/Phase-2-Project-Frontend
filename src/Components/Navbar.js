@@ -38,6 +38,12 @@ function Navbar(){
                     style={look}
                     activeStyle={activated}
                 >Planet List</NavLink>
+                <NavLink
+                    to="/Form"
+                    exact
+                    style={look}
+                    activeStyle={activated}
+                >Form</NavLink>
             </div>
         </div>
     )

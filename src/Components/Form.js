@@ -101,6 +101,13 @@ return (
                 onChange={handleChange}
                 placeholder='Planetary Climate(s)'>
             </input>
+            <input
+                    className="form-submit"
+                    type="submit"
+                    name="submit"
+                    value='Submit Planet'
+                    onClick={handleSubmit}>
+                </input>
         </form>
     </div>
     )

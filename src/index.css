@@ -70,4 +70,29 @@ body {
   background-color: goldenrod;
 }
 
+.form-container {
+  margin: auto;
+  max-width: 700px;
+}
 
+.form-container p:not(#form-info) {
+  margin: 0;
+}
+
+#form-info {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid slategray;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.form-submit:hover {
+  background-color: skyblue;
+}
