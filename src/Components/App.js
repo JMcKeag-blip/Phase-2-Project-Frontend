@@ -5,10 +5,10 @@ import { Route, Switch } from "react-router-dom";
 import FullPlanetList from "./FullPlanetList";
 import Itinerary from "./Itinerary";
 import PlanetCard from "./PlanetCard";
+import Form from "./Form";
 
 function App() {
   const [planetsInItinerary, setPlanetsInItinerary] = useState([])
-  const [planetList, setPlanetList] = useState([])
   const [initialPlanetList, setInitialPlanetList] = useState([])
 
 const travelList= planetsInItinerary.map(planet => {
@@ -33,7 +33,6 @@ const starChart= initialPlanetList.map(planet => {
   )
 })
 
-const API= "https://swapi.dev/api/planets/1/"
 const LOCAL= "http://localhost:3001/planets"
 
 useEffect(()=> {
@@ -45,24 +44,6 @@ useEffect(()=> {
   .then(r => r.json())
   .then(d => setInitialPlanetList(d))
 }, [])
-
-/*useEffect(()=> {
-  initialPlanetList.forEach(planet =>{
-    fetch(`https//swapi.dev${planet.url}`)
-    .then(r=> r.json())
-    .then(d=> setPlanetList(previous=>
-      [
-        ...previous,
-        <PlanetCard
-            key={d.index}
-            item={d}
-            location='planetList'
-            typeOfClick={handlePost}
-          />
-      ]
-    ))
-  })
-}, [initialPlanetList])*/
 
 function handlePost(planetToAdd){
   fetch(LOCAL, {
@@ -93,6 +74,9 @@ function handleItineraryClick(clicked){
         </Route>
         <Route exact path="/Itinerary">
           <Itinerary planets={travelList}/>
+        </Route>
+        <Route exact path="/Form">
+          <Form onHandleSubmit={handlePost}/>
         </Route>
         <Route exact path="/PlanetList">
           <FullPlanetList planets={starChart}/>
