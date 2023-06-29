@@ -94,5 +94,23 @@ input {
 }
 
 .form-submit:hover {
-  background-color: skyblue;
+  background-color: goldenrod;
+}
+
+.randomBtn {
+  font-size: x-large;
+  width: 200px;
+  height: 75px;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
 }
