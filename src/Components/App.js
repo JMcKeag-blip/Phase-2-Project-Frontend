@@ -6,6 +6,7 @@ import FullPlanetList from "./FullPlanetList";
 import Itinerary from "./Itinerary";
 import PlanetCard from "./PlanetCard";
 import Form from "./Form";
+import RandomPlanet from "./RandomPlanet";
 
 function App() {
   const [planetsInItinerary, setPlanetsInItinerary] = useState([])
