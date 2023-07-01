@@ -6,7 +6,7 @@ import FullPlanetList from "./FullPlanetList";
 import Itinerary from "./Itinerary";
 import PlanetCard from "./PlanetCard";
 import Form from "./Form";
-import RandomPlanet from "./RandomPlanet";
+import RandomPlanets from "./RandomPlanets";
 
 function App() {
   const [planetsInItinerary, setPlanetsInItinerary] = useState([])
@@ -81,6 +81,9 @@ function handleItineraryClick(clicked){
         </Route>
         <Route exact path="/PlanetList">
           <FullPlanetList planets={starChart}/>
+        </Route>
+        <Route exact path="/RandomPlanets">
+          <RandomPlanets planets={starChart}/>
         </Route>
       </Switch>
     </>

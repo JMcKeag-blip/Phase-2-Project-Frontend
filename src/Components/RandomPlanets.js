@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function RandomPlanet({ planets }) {
+function RandomPlanets({ planets }) {
     const [num, setNum] = useState(0)
     const [more, setMore] = useState(0)
     const [display, setDisplay] = useState([])
@@ -54,4 +54,4 @@ function RandomPlanet({ planets }) {
     )
 }
 
-export default RandomPlanet
+export default RandomPlanets
