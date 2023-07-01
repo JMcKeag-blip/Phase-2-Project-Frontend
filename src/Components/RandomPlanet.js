@@ -24,7 +24,34 @@ function RandomPlanet({ planets }) {
             }
         }
     }
-    
+    return (
+        <div className="randomPlanets">
+            <h1>Random Planets</h1>
+            <p className="home">
+                Here in the Random Planet section you can select how many random planets you would like to get.
+                To do so just adust the number of planets using the "More" or "Less" buttons below. You should see
+                random planets getting added to a list of cards below. If at any point you need a new list of
+                random planets just click the "New Random Planets" button and a new list of planets will be
+                generated with the current number of planets selected. Planets clicked will still be added to the inventory
+                just the same as if you clicked them from the full list of planets.
+                <br/>
+                <br/>
+            </p>
+            <button className="randomBtn" name="new" onClick={handleClick}>New Random Planets</button>
+            <br/>
+            <br/>
+            <div className="btn-container">
+                <button className="randomBtn" name="less" onClick={handleClick}>Less</button>
+                <h1>{num}</h1>
+                <button className="randomBtn" name="more" onClick={handleClick}>More</button>
+            </div>
+            <br/>
+            <br/>
+            <div className="card-container">
+                {shown}
+            </div>
+        </div>
+    )
 }
 
 export default RandomPlanet

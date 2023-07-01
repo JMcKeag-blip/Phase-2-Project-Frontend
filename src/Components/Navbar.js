@@ -44,6 +44,12 @@ function Navbar(){
                     style={look}
                     activeStyle={activated}
                 >Form</NavLink>
+                <NavLink
+                    to="/RandomPlanets"
+                    exact
+                    style={look}
+                    activeStyle={activated}
+                >Random Planets</NavLink>
             </div>
         </div>
     )
