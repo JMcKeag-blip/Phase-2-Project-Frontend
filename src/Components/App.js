@@ -10,7 +10,6 @@ import RandomPlanets from "./RandomPlanets";
 
 function App() {
   const [planetsInItinerary, setPlanetsInItinerary] = useState([])
-  const [initialPlanetList, setInitialPlanetList] = useState([])
 
 const travelList= planetsInItinerary.map(planet => {
   return(
@@ -18,18 +17,7 @@ const travelList= planetsInItinerary.map(planet => {
       key={planet.id ? `${planet.name} ${planet.id}` : planet.name}
       planet={planet}
       location='itinerary'
-      typeOfClick={handleItineraryClick}
-      />
-  )
-})
-
-const starChart= initialPlanetList.map(planet => {
-  return(
-    <PlanetCard
-      key={planet.id ? `${planet.name} ${planet.id}` : planet.name}
-      planet={planet}
-      location='planetList'
-      typeOfClick={handlePost}
+      typeOfClick={handleDeleteClick}
       />
   )
 })
@@ -40,10 +28,6 @@ useEffect(()=> {
   fetch(LOCAL)
   .then(r => r.json())
   .then(d => setPlanetsInItinerary(d))
-
-  fetch(LOCAL)
-  .then(r => r.json())
-  .then(d => setInitialPlanetList(d))
 }, [])
 
 function handlePost(planetToAdd){
@@ -58,8 +42,8 @@ function handlePost(planetToAdd){
     .then(d=> setPlanetsInItinerary([...planetsInItinerary, d]))
 }
 
-function handleItineraryClick(clicked){
-  fetch(`${LOCAL}${clicked.id}`, {
+function handleDeleteClick(clicked){
+  fetch(`${LOCAL}/${clicked.id}`, {
     method: "DELETE"
   })
   setPlanetsInItinerary(inItineraryPlanets => inItineraryPlanets.filter(each => each.id !== clicked.id))
