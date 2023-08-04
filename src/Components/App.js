@@ -2,7 +2,6 @@ import React, { useEffect, useState} from "react";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
-import FullPlanetList from "./FullPlanetList";
 import Itinerary from "./Itinerary";
 import PlanetCard from "./PlanetCard";
 import Form from "./Form";
@@ -63,11 +62,8 @@ function handleDeleteClick(clicked){
         <Route exact path="/Form">
           <Form onHandleSubmit={handlePost}/>
         </Route>
-        <Route exact path="/PlanetList">
-          <FullPlanetList planets={starChart}/>
-        </Route>
         <Route exact path="/RandomPlanets">
-          <RandomPlanets planets={starChart}/>
+          <RandomPlanets planets={travelList}/>
         </Route>
       </Switch>
     </>

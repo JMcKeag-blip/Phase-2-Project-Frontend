@@ -15,9 +15,6 @@ function Home() {
                 Next to that you should see the Itinerary tab. This tab will show you the current items within your travel itinerary.
                 <br/>
                 <br/>
-                After that should be the Planet List tab. Here you can select planets that you would like to visit and add to your itinerary.
-                <br/>
-                <br/>
                 Next is the Form tab, here you can submit your own custom planets onto the list. There are a few requirments 
                 which you can find over on that tab. There are a few required form inputs that you will need to fill out
                 as well. These planets are currently only stored in your specific itinerary. So make sure if you go to delete one of these
