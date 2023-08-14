@@ -33,12 +33,6 @@ function Navbar(){
                     activeStyle={activated}
                 >Itinerary</NavLink>
                 <NavLink
-                    to="/PlanetList"
-                    exact
-                    style={look}
-                    activeStyle={activated}
-                >Planet List</NavLink>
-                <NavLink
                     to="/Form"
                     exact
                     style={look}

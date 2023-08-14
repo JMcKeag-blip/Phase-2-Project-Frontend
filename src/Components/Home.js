@@ -12,13 +12,12 @@ function Home() {
                 Currently you should see that the Home tab is selected. This is where you can find out how to use this app.
                 <br/>
                 <br/>
-                Next to that you should see the Itinerary tab. This tab will show you the current items within your travel itinerary.
+                Next to that you should see the Itinerary tab. This tab will show you the current items within your travel itinerary. and remove them as well.
                 <br/>
                 <br/>
-                Next is the Form tab, here you can submit your own custom planets onto the list. There are a few requirments 
-                which you can find over on that tab. There are a few required form inputs that you will need to fill out
-                as well. These planets are currently only stored in your specific itinerary. So make sure if you go to delete one of these
-                planets that you wont need it again, because if you do you will need to fill out the form again to get it back!
+                Next is the Form tab, here you can submit your own custom planets onto the list. There are a few required form inputs that you will need to fill out
+                as well in order for the planets you submit to be valid for entry into the Itinerary. These planets are currently only stored in your specific itinerary. 
+                So make sure if you go to delete one of these planets that you wont need it again, because if you do you will need to fill out the form again to get it back!
                 <br/>
                 <br/>
                 Last in this lineup will be the Random Planets tab! You can select how many random planets you want and will get back as many planets as
